@@ -1,19 +1,98 @@
-# RA-Emmanuel
-Removal of cloud noise in satellite imagery data using Artificial Intelligence(AI)
-Removal of cloud noise in satellite imagery data using Artificial Intelligence(AI)
 
+# 🌥️ CloudSeg: Deep Learning for Cloud and Cloud-Shadow Segmentation
 
-This research project addresses the complex challenge of cloud noise in satellite imagery employing advanced artificial intelligence models for detection and removal. Our investigation spans multiple phases, beginning with a baseline examination of image classification models like LightCSPNet and progressing to transformer-based models such as Vision Transformer (ViT), CLIP, and Align. The study focuses on their advantages and limitations in cloud and cloud-shadow detection, leveraging datasets like SPARCS, Landsat 8, and Band 9 satellite data for comprehensive evaluation.
+**Author:** Emmanuel Asante  
+**Affiliation:** Graduate Student, Northeastern University  
+**Program:** MPS in Analytics (Concentration: Machine Intelligence)
 
-Building upon successful model development, the project extends toward practical deployment on small satellites. Two main objectives guide this phase: optimizing models for image preprocessing tasks to enhance efficiency in small satellite systems, and fine-tuning models using data from the Maine Space Complex small satellite for adaptation to regional characteristics. Beyond technical advancements, our research holds broader impacts, including improved environmental monitoring, conservation efforts, and community engagement. The models, equipped with effective cloud noise removal, enable answering broader research questions. Specifically, the project explores the effects of global warming in coastal areas through image processing and object detection tasks.
+---
 
-The deployment of our models will contribute to real-time environmental monitoring, supporting conservation initiatives, and aiding decision-makers in coastal management. Additionally, educational outreach initiatives aim to inspire future generations to space technology, artificial intelligence, and environmental science. In summary, our project is a multidimensional endeavor that combines cutting-edge technology with practical applications, environmental stewardship, and societal engagement, aiming to make a lasting positive impact on both local communities and the broader scientific community.
+## 📘 Overview
 
+**CloudSeg** is a research-driven project that explores and compares deep learning models for cloud and cloud-shadow detection in satellite imagery, using the [38-Cloud dataset](https://www.kaggle.com/datasets/sorour/38cloud-cloud-segmentation-in-satellite-images).
 
+This repository contains several Jupyter notebooks implementing various models and preprocessing techniques to perform semantic segmentation of clouds from multispectral satellite images.
 
+---
 
-The dataset that was used finally wa sreally large and could not be upoaded directly to github. It was rather uploaded to google drive. The link to it is as below;
+## 🧠 Models Implemented
 
-https://drive.google.com/file/d/1K7kGhtxy2sHfiimci0GW08kaEzvHA69G/view?usp=sharing
+- **LightCSPNet**: A lightweight CNN-based model benchmarked for cloud segmentation.
+- **SegFormer**: A transformer-based architecture applied to cloud masking tasks.
+- **CloudViT**: Vision Transformer architecture used for cloud detection and comparison.
+- **Otsu Thresholding**: A classical baseline method for binary mask generation using pixel-level intensity distributions.
 
+---
 
+## 📂 Repository Contents
+
+| File Name | Description |
+| --------- | ----------- |
+| `LightCSPNet_38Cloud.ipynb` | Training and evaluation of LightCSPNet on the 38-Cloud dataset |
+| `SegFormer_38Cloud_Eval.ipynb` | Evaluation of SegFormer outputs and Dice/IoU scores |
+| `CloudViT.ipynb` | Vision Transformer (ViT) pipeline for segmentation |
+| `LightCSPNet_Cloud_Masking_with_Threshold_Slider.ipynb` | Interactive cloud masking using sliders and LightCSPNet predictions |
+| `Otsu's method for mask generation.ipynb` | Classical thresholding for mask creation |
+
+---
+
+## 📊 Dataset
+
+- **Source**: 38-Cloud (Kaggle)
+- **Format**: Multispectral Landsat 8 imagery
+- **Ground Truth**: Binary cloud masks
+
+Each image is processed into RGB format or full multispectral input for training and evaluation.
+
+---
+
+## 🛠️ Features & Highlights
+
+- Interactive threshold tuning (with sliders)
+- Dice coefficient & IoU evaluation metrics
+- Model comparison: CNNs vs. Transformers
+- Custom mask visualizations with overlay
+
+---
+
+## 🏁 How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/cloudseg.git
+   cd cloudseg
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Launch Jupyter:
+   ```bash
+   jupyter notebook
+   ```
+
+---
+
+## 📈 Sample Output
+
+*(Insert sample visual here of cloud mask prediction vs. ground truth)*
+
+---
+
+## 🤝 Acknowledgments
+
+- Kaggle 38-Cloud Dataset
+- SegFormer, LightCSPNet, and ViT source papers
+- Northeastern University – Roux Institute
+
+---
+
+## 📜 License
+
+This project is for academic and research use. Feel free to fork and build on it with attribution.
+
+---
+
+> For questions, collaborations, or feedback, reach out at [emanuelasante2@gmail.com](mailto:emanuelasante2@gmail.com)
