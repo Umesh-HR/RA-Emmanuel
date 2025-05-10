@@ -38,7 +38,7 @@ This repository contains several Jupyter notebooks implementing various models a
 
 ## 📊 Dataset
 
-- **Source**: 38-Cloud (Kaggle)
+- **Source**: 38-Cloud
 - **Format**: Multispectral Landsat 8 imagery
 - **Ground Truth**: Binary cloud masks
 - **Link**: https://drive.google.com/file/d/1K7kGhtxy2sHfiimci0GW08kaEzvHA69G/view?usp=sharing
