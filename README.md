@@ -49,7 +49,6 @@ Each image is processed into RGB format or full multispectral input for training
 
 ## 🛠️ Features & Highlights
 
-- Interactive threshold tuning (with sliders)
 - Dice coefficient & IoU evaluation metrics
 - Model comparison: CNNs vs. Transformers
 - Custom mask visualizations with overlay
